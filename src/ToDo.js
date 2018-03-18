@@ -17,7 +17,7 @@ class Todo extends Component {
                 <span className="toggle-todo" onClick={this.toggleDone}>
                     {todo.name}
                 </span>
-                <button className="deleteTodo" onClick={this.onClick}>Delete</button>
+                <button className="delete-todo" onClick={this.onClick}>Delete</button>
             </div>
         );
     }
