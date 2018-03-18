@@ -3,6 +3,7 @@ import uuidv4 from 'uuid/v4';
 import AddTodo from './AddTodo';
 import { toggleDone, addTodo, deleteTodo} from './state-functions';
 import Todo from './ToDo';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class TodoList extends React.Component {
   constructor(props) {
@@ -46,7 +47,15 @@ export default class TodoList extends React.Component {
         <AddTodo onNewTodo={todo => this.addTodo(todo)} />
         <h2>Todos:</h2>
         <ul className="todos-list">
-          {this.renderTodos()}
+          <ReactCSSTransitionGroup
+            transitionName="example"
+            transitionAppear={true}
+            transitionAppearTimeout={500}
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}
+          >
+            {this.renderTodos()}
+          </ReactCSSTransitionGroup>
         </ul>
       </div>
     )
