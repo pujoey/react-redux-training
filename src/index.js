@@ -4,7 +4,7 @@ import './index.css';
 import Routes from './routes';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import reducer from './reducer';
+import reducer from './components/calc/reducer';
 
 const store = createStore(
   reducer, 
