@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
-import SideNav from './Sidenav';
+import Sidenav from './Sidenav';
 
 export const withRouter = Wrapped => props => (
     <Router>
@@ -8,9 +8,9 @@ export const withRouter = Wrapped => props => (
     </Router>
 );
 
-export const withSideNav = Wrapped => props => (
+export const withSidenav = Wrapped => props => (
     <div className='wrapper'>
-        <SideNav />
+        <Sidenav />
         <div className='container'>
             <Wrapped {...props} />
         </div>

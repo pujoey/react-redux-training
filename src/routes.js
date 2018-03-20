@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import TodoList from "./components/todo/TodoList";
 import Calc from "./components/calc/Calc";
 import Chat from "./components/chat/Chat";
-import { withRouter, withSideNav } from './containers'; 
+import { withRouter, withSidenav } from './containers'; 
 
 export const Routes = (props) => (
     <div>
@@ -14,4 +14,4 @@ export const Routes = (props) => (
     </div>
 );
 
-export default withRouter(withSideNav(Routes));
+export default withRouter(withSidenav(Routes));
